@@ -1,7 +1,7 @@
-# Mobil alkalmazásfejlesztés — Projektmunka
+# Mobile Application Development — Project Work
 
-> **Projekt téma:** Időmérő alkalmazás edzésekhez  
-> **Keretrendszer:** Expo React Native  
+> **Project Topic:** Workout Timer Application
+> **Framework:** Expo React Native
 
 ---
 
@@ -10,9 +10,9 @@
 
 ---
 
-## 🚀 A projekt indítása (lokális futtatás)
+## 🚀 Launching the Project (Local Execution)
 
-### Előfeltételek
+### Prerequisites
 
 > **TypeScript** for type safety
 > **NativeWind (Tailwind CSS)** for styling
@@ -20,38 +20,36 @@
 > **Expo SQLite** for local database management
 > **Jest & React Native Testing Library** for testing
 
-### Telepítés és futtatás
-
+### Installation and Setup
 ```bash
-git clone projektmunka-B-arney
+git clone assignment-B-arney
 cd Mobil_Alkalmazasfejlesztes
-
 npm install
 npm run android
 ```
 
 ---
 
-## 📱 Letöltés / Telepítés
+## 📱 Download / Installation
+- **APK Download:** The APK version of the application (Android) will be available via the [Releases](https://github.com/b-arney/WorkoutTimer/releases) page.
+- GitHub Release steps:
+1. `eas build -p android --profile preview`
+2. Uploading the generated APK to the latest GitHub Release.
 
-- **APK Letöltés:** Az alkalmazás APK verziója (Android) letölthető a [Releases](https://github.com/b-arney/Mobil_Alkalmazasfejlesztes/releases) oldalon keresztül.
-- A GitHub Release lépései:
-  1. \`eas build -p android --profile preview\`
-  2. A létrejött APK feltöltése a legújabb GitHub Release-hez.
+## 🧪 E2E Testing and Authentication
 
-## 🧪 E2E tesztelés és Autentikáció
+The project utilizes Detox-based End-to-End (E2E) tests for the login and workout creation workflows.
 
-A projekt Detox alapú End-to-End (E2E) teszteket használ a bejelentkezési és munkamenet (workout) létrehozási folyamatokhoz.
+### Running E2E Tests (Locally)
 
-### E2E Tesztek Futtatása (Lokálisan)
-1. Győződj meg róla, hogy az Android Emulator fut, vagy van csatlakozott eszközöd (\`adb devices\`).
-2. Futtasd a teszt szkriptet:
-   \`\`\`bash
-   npm run e2e
-   \`\`\`
-Ez lefordítja az alkalmazást egy \`android.emu.debug\` build-ként, majd elindítja a teszteket a konfigurált emulátoron.
+1. Ensure that the Android Emulator is running or that you have a connected device (`adb devices`).
+2. Run the test script:
+```bash
+npm run e2e
+```
+This will compile the application as an `android.emu.debug` build and then launch the tests on the configured emulator.
 
-### Autentikáció
-A Firebase Auth alapú bejelentkezés integrált. Regisztráció vagy bejelentkezés szükséges a "Workout Plans" oldal megtekintéséhez, valamint edzéstervek létrehozásához. Az app automatikusan \`auth/login\`-ra irányít, ha nincs bejelentkezve felhasználó.
+### Authentication
 
----
+Firebase Auth-based login is integrated into the system. Registration or login is required to view the "Workout Plans" page and to create workout routines. The app automatically redirects to `auth/login` if no user is authenticated.
+
