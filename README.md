@@ -5,6 +5,11 @@
 
 ---
 
+[workout selection screen](Screenshot_20260613_091553_Mobil_Alkalmazasfejlesztes.jpg)
+[active workout](Screenshot_20260613_091535_Mobil_Alkalmazasfejlesztes.jpg)
+
+---
+
 ## 🚀 A projekt indítása (lokális futtatás)
 
 ### Előfeltételek
